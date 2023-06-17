@@ -1,0 +1,27 @@
+<!-- instances.html -->
+{% extends 'base.html' %}
+
+{% block title %}Instances{% endblock %}
+
+{% block content %}
+    <h1>Welcome to the instances page for Team: {{ team.name }}</h1>
+    
+    {% if instances %}
+        <ul>
+            {% for instance in instances %}
+                <li>{{ instance.instance_id }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No instances found. Please add instances.</p>
+    {% endif %}
+    
+    <h2>Add Instances</h2>
+    <form method="post" action="{% url 'add_instance_view' team_id=team.id %}">
+        {% csrf_token %}
+        <label for="instance_ids">Instance IDs:</label>
+        <input type="text" name="instance_id" id="instance_ids">
+        <br>
+        <input type="submit" value="Add">
+    </form>
+{% endblock %}

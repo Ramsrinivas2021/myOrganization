@@ -1,0 +1,8 @@
+<!-- add_teams.html -->
+<h2>Add Team</h2>
+<form method="POST" action="{% url 'add_team' %}">
+  {% csrf_token %}
+  <label for="team_name">Team Name:</label>
+  <input type="text" id="team_name" name="team_name" required>
+  <button type="submit">Add Team</button>
+</form>

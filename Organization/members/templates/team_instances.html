@@ -1,0 +1,12 @@
+<h1>Welcome to the instances page for Team: {{ team.name }}</h1>
+
+{% if instances %}
+  <h2>Instance IDs:</h2>
+  <ul>
+    {% for instance in instances %}
+      <li>{{ instance.instance_id }}</li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>No instances found. Please add instances.</p>
+{% endif %}

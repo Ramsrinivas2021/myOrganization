@@ -1,0 +1,26 @@
+<h1>Welcome to Teams, {{ username }}!</h1>
+<!-- Display teams list -->
+{% if teams %}
+  <ul>
+    {% for team in teams %}
+      <li>
+        {{ team.name }}
+        <form method="POST" action="{% url 'delete_team' team.id %}">
+          {% csrf_token %}
+          <button type="submit">Delete</button>
+        </form>
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>No teams found.</p>
+{% endif %}
+
+<!-- Add Team form -->
+<form method="POST" action="{% url 'add_team' %}">
+  {% csrf_token %}
+  <label for="team_name">Team Name:</label>
+  <input type="text" id="team_name" name="team_name" required>
+  <button type="submit">Add Team</button>
+</form>
+
