@@ -1,27 +1,75 @@
-<!-- instances.html -->
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}Instances{% endblock %}
 
 {% block content %}
-    <h1>Welcome to the instances page for Team: {{ team.name }}</h1>
-    
+    <h1 style="color: #333; text-align: center; margin-bottom: 20px;">Welcome to the instances page for Team: {{ team.name }}</h1>
+
     {% if instances %}
-        <ul>
+        <ul style="list-style-type: none; padding: 0; margin-bottom: 20px;">
             {% for instance in instances %}
-                <li>{{ instance.instance_id }}</li>
+                <li style="margin-bottom: 10px;">
+                    <span style="display: inline-block; margin-right: 10px; font-weight: bold; width: 200px;">{{ instance.instance_id }}</span>
+                    <form method="post" action="{% url 'delete_instance' instance.id %}">
+                        {% csrf_token %}
+                        <button type="submit" style="background-color: #337ab7; color: #fff; padding: 5px 10px; border: none; cursor: pointer;">Delete</button>
+                    </form>
+                </li>
             {% endfor %}
         </ul>
     {% else %}
-        <p>No instances found. Please add instances.</p>
+        <p style="color: #555;">No instances found. Please add instances.</p>
     {% endif %}
-    
-    <h2>Add Instances</h2>
-    <form method="post" action="{% url 'add_instance_view' team_id=team.id %}">
+
+    <form method="post" action="{% url 'add_instance_view' team_id=team.id %}" style="margin-bottom: 20px;">
         {% csrf_token %}
-        <label for="instance_ids">Instance IDs:</label>
-        <input type="text" name="instance_id" id="instance_ids">
-        <br>
-        <input type="submit" value="Add">
+        <label for="instance_ids" style="font-weight: bold;">Instance IDs:</label>
+        <input type="text" name="instance_id" id="instance_ids" style="padding: 5px; border: 1px solid #337ab7;">
+        <input type="submit" value="Add" style="background-color: #337ab7; color: #fff; padding: 5px 10px; border: none; cursor: pointer;">
+        <div id="instance-validation-message"></div>
+        {% if invalid_instance_ids %}
+            <ul style="color: red; margin-top: 10px; padding-left: 20px;">
+                {% for invalid_instance_id in invalid_instance_ids %}
+                    <li>Invalid instance ID: {{ invalid_instance_id }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
     </form>
+
+    <a href="{% url 'teams' %}" style="display: block; margin-top: 20px; text-align: center;">Back to teams list</a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the instance ID input element
+            const instanceIdInput = document.getElementById('instance_ids');
+
+            // Add event listener for input change
+            instanceIdInput.addEventListener('input', function() {
+                // Remove any previous validation messages
+                const validationMessage = document.getElementById('instance-validation-message');
+                if (validationMessage) {
+                    validationMessage.remove();
+                }
+
+                // Get the instance ID value
+                const instanceId = instanceIdInput.value.trim();
+
+                // Check if instance ID is empty
+                if (instanceId === '') {
+                    instanceIdInput.setCustomValidity('Please enter an instance ID');
+                } else {
+                    // Use a regular expression to validate the instance ID format
+                    const instanceIdPattern = /^i-[a-fA-F0-9]{8,}$/;
+                    const isValidInstanceId = instanceIdPattern.test(instanceId);
+
+                    if (!isValidInstanceId) {
+                        instanceIdInput.setCustomValidity('Invalid instance ID. Please enter a valid instance ID');
+                    } else {
+                        instanceIdInput.setCustomValidity('');
+                    }
+                }
+            });
+        });
+    </script>
 {% endblock %}

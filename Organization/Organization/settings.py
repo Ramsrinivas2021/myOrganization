@@ -121,9 +121,30 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# settings.py
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',  # Adjust the desired log level
+            'class': 'logging.FileHandler',
+            'filename': 'project.log',  # Specify the log file name and path
+        },
+    },
+    'root': {
+        'handlers': ['file'],
+        'level': 'DEBUG',  # Adjust the desired root log level
+    },
+}

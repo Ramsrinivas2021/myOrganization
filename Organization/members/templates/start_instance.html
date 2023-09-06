@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Start Instance{% endblock %}
+
+{% block content %}
+    <h1>Start Instance</h1>
+    
+    <h2>Team: {{ team.name }}</h2>
+    
+    {% if message %}
+        <p style="color: green;">{{ message }}</p>
+    {% endif %}
+    
+    {% if error_message %}
+        <p style="color: red;">{{ error_message }}</p>
+    {% endif %}
+    <form method="post">
+    </form>
+    {% csrf_token %}
+    
+    <a href="{% url 'team_instances_view' team_id=team.id %}">Back to Team Instances</a>
+{% endblock %}

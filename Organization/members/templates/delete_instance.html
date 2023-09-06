@@ -1,0 +1,14 @@
+<!-- delete_instance.html -->
+{% extends 'base.html' %}
+
+{% block title %}Delete Instance{% endblock %}
+
+{% block content %}
+  <h1>Delete Instance</h1>
+  <p>Are you sure you want to delete the instance "{{ instance.instance_id }}"?</p>
+  <form method="post" action="{% url 'delete_instance' instance.id %}">
+    {% csrf_token %}
+    <button type="submit">Delete</button>
+    <a href="{% url 'team_instances_view' team_id=instance.team_id %}">Cancel</a>
+  </form>
+{% endblock %}

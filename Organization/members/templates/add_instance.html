@@ -1,44 +1,8 @@
-<!-- add_instance.html -->
-<!-- <h2>Add Instance</h2>
+<!--add_instance.html-->
+<h2>Add Instance</h2>
 <form method="POST" action="{% url 'add_instance_view' team.id %}">
   {% csrf_token %}
   <label for="instance_id">Instance IDs (separated by commas):</label>
   <input type="text" id="instance_id" name="instance_id" required><br>
   <button type="submit">Add Instances</button>
-</form> -->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Add Instance</title>
-    <style>
-        .error-message {
-            color: red;
-            font-weight: bold;
-        }
-    </style>
-    <script>
-        function validateInstance() {
-            var instanceId = document.getElementById('instanceId').value;
-            var errorMessage = document.getElementById('errorMessage');
-
-            // Perform instance validation logic here
-            if (instanceId === '') {
-                errorMessage.style.display = 'block'; // Show error message
-            } else {
-                errorMessage.style.display = 'none'; // Hide error message
-                // Add instance logic here
-                // ...
-            }
-        }
-    </script>
-</head>
-<body>
-    <h1>Add Instance</h1>
-    <div>
-        <label for="instanceId">Instance ID:</label>
-        <input type="text" id="instanceId">
-        <button onclick="validateInstance()">Add Instance</button>
-        <p id="errorMessage" class="error-message" style="display: none;">The provided instance ID is not valid.</p>
-    </div>
-</body>
-</html>
+</form>

@@ -1,0 +1,801 @@
+CustomUserAdmin registered.
+CustomUserAdmin registered.
+CustomUserAdmin registered.
+Watching for file changes with StatReloader
+Rendering home page.
+Not Found: /favicon.ico
+CustomUserAdmin registered.
+CustomUserAdmin registered.
+Watching for file changes with StatReloader
+Rendering home page.
+Not Found: /favicon.ico
+Login attempt for user: srinivas
+Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+Changing event name from before-call.apigateway to before-call.api-gateway
+Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+Loading JSON file: C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\data\endpoints.json
+Loading JSON file: C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\data\sdk-default-configuration.json
+Event choose-service-name: calling handler <function handle_service_name_alias at 0x0000015A02030900>
+Loading JSON file: C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\data\ec2\2016-11-15\service-2.json
+Loading JSON file: C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\data\ec2\2016-11-15\endpoint-rule-set-1.json.gz
+Loading JSON file: C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\data\partitions.json
+Event creating-client-class.ec2: calling handler <function add_generate_presigned_url at 0x0000015A01F6EA20>
+Setting ec2 timeout as (60, 60)
+Loading JSON file: C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\data\_retry.json
+Registering retry handlers for service: ec2
+Calling endpoint provider with parameters: {'Region': 'us-east-1', 'UseDualStack': False, 'UseFIPS': False}
+Endpoint provider result: https://ec2.us-east-1.amazonaws.com
+Event before-parameter-build.ec2.StartInstances: calling handler <bound method ParameterAlias.alias_parameter_in_call of <botocore.handlers.ParameterAlias object at 0x0000015A02051E10>>
+Event before-parameter-build.ec2.StartInstances: calling handler <function generate_idempotent_uuid at 0x0000015A02032160>
+Event before-call.ec2.StartInstances: calling handler <function add_recursion_detection_header at 0x0000015A020311C0>
+Event before-call.ec2.StartInstances: calling handler <function inject_api_version_header_if_needed at 0x0000015A02033C40>
+Making request for OperationModel(name=StartInstances) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.26.129 Python/3.11.2 Windows/10 Botocore/1.29.129'}, 'body': {'Action': 'StartInstances', 'Version': '2016-11-15', 'InstanceId.1': 'i-07105d61c46c83995'}, 'url': 'https://ec2.us-east-1.amazonaws.com/', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x0000015A03C019D0>, 'has_streaming_input': False, 'auth_type': None}}
+Event request-created.ec2.StartInstances: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x0000015A03BE5290>>
+Event choose-signer.ec2.StartInstances: calling handler <function set_operation_specific_signer at 0x0000015A02032020>
+Calculating signature using v4 auth.
+CanonicalRequest:
+POST
+/
+
+content-type:application/x-www-form-urlencoded; charset=utf-8
+host:ec2.us-east-1.amazonaws.com
+x-amz-date:20230905T164604Z
+
+content-type;host;x-amz-date
+1aac96474950b1e384cdb64ffb15afeb84c8bdbe7ac6783f025652dafe1c0c91
+StringToSign:
+AWS4-HMAC-SHA256
+20230905T164604Z
+20230905/us-east-1/ec2/aws4_request
+afdabf1a08d593e60ce3f5dd3de7849a7776c81a130e91101ab32827b03c4116
+Signature:
+081d5c8509fe3473da92fed17d419734537172ffb829e556bd0718f90e651a8b
+Event request-created.ec2.StartInstances: calling handler <function add_retry_headers at 0x0000015A02058400>
+Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://ec2.us-east-1.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.26.129 Python/3.11.2 Windows/10 Botocore/1.29.129', 'X-Amz-Date': b'20230905T164604Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAX2VFF7LDK6BPSAUR/20230905/us-east-1/ec2/aws4_request, SignedHeaders=content-type;host;x-amz-date, Signature=081d5c8509fe3473da92fed17d419734537172ffb829e556bd0718f90e651a8b', 'amz-sdk-invocation-id': b'3aa45e09-1e55-4b0d-8344-1f8b5b9022b8', 'amz-sdk-request': b'attempt=1', 'Content-Length': '73'}>
+Certificate path: C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\certifi\cacert.pem
+Starting new HTTPS connection (1): ec2.us-east-1.amazonaws.com:443
+Exception received when sending HTTP request.
+Traceback (most recent call last):
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\util\connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\httpsession.py", line 465, in send
+    urllib_response = conn.urlopen(
+                      ^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\util\retry.py", line 525, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <botocore.awsrequest.AWSHTTPSConnection object at 0x0000015A02F75D10>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\endpoint.py", line 281, in _do_get_response
+    http_response = self._send(request)
+                    ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\endpoint.py", line 377, in _send
+    return self.http_session.send(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\httpsession.py", line 494, in send
+    raise EndpointConnectionError(endpoint_url=request.url, error=e)
+botocore.exceptions.EndpointConnectionError: Could not connect to the endpoint URL: "https://ec2.us-east-1.amazonaws.com/"
+Event needs-retry.ec2.StartInstances: calling handler <botocore.retryhandler.RetryHandler object at 0x0000015A03C2D750>
+retry needed, retryable exception caught: Could not connect to the endpoint URL: "https://ec2.us-east-1.amazonaws.com/"
+Traceback (most recent call last):
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\util\connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\httpsession.py", line 465, in send
+    urllib_response = conn.urlopen(
+                      ^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\util\retry.py", line 525, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <botocore.awsrequest.AWSHTTPSConnection object at 0x0000015A02F75D10>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\retryhandler.py", line 307, in _should_retry
+    return self._checker(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\retryhandler.py", line 363, in __call__
+    checker_response = checker(
+                       ^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\retryhandler.py", line 247, in __call__
+    return self._check_caught_exception(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\retryhandler.py", line 416, in _check_caught_exception
+    raise caught_exception
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\endpoint.py", line 281, in _do_get_response
+    http_response = self._send(request)
+                    ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\endpoint.py", line 377, in _send
+    return self.http_session.send(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\httpsession.py", line 494, in send
+    raise EndpointConnectionError(endpoint_url=request.url, error=e)
+botocore.exceptions.EndpointConnectionError: Could not connect to the endpoint URL: "https://ec2.us-east-1.amazonaws.com/"
+Retry needed, action of: 0.8667893761928895
+Response received to retry, sleeping for 0.8667893761928895 seconds
+Event request-created.ec2.StartInstances: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x0000015A03BE5290>>
+Event choose-signer.ec2.StartInstances: calling handler <function set_operation_specific_signer at 0x0000015A02032020>
+Calculating signature using v4 auth.
+CanonicalRequest:
+POST
+/
+
+content-type:application/x-www-form-urlencoded; charset=utf-8
+host:ec2.us-east-1.amazonaws.com
+x-amz-date:20230905T164605Z
+
+content-type;host;x-amz-date
+1aac96474950b1e384cdb64ffb15afeb84c8bdbe7ac6783f025652dafe1c0c91
+StringToSign:
+AWS4-HMAC-SHA256
+20230905T164605Z
+20230905/us-east-1/ec2/aws4_request
+96d12bac8a372e0b50c63840f9b9717e5f0300fc19beb222c5e273768bf31524
+Signature:
+3774bd83a1e367403518128f03f8931c15eb042b9ed7edd1cb5b7fc9aa602317
+Event request-created.ec2.StartInstances: calling handler <function add_retry_headers at 0x0000015A02058400>
+Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://ec2.us-east-1.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.26.129 Python/3.11.2 Windows/10 Botocore/1.29.129', 'X-Amz-Date': b'20230905T164605Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAX2VFF7LDK6BPSAUR/20230905/us-east-1/ec2/aws4_request, SignedHeaders=content-type;host;x-amz-date, Signature=3774bd83a1e367403518128f03f8931c15eb042b9ed7edd1cb5b7fc9aa602317', 'amz-sdk-invocation-id': b'3aa45e09-1e55-4b0d-8344-1f8b5b9022b8', 'amz-sdk-request': b'attempt=2; max=5', 'Content-Length': '73'}>
+Certificate path: C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\certifi\cacert.pem
+Starting new HTTPS connection (2): ec2.us-east-1.amazonaws.com:443
+Exception received when sending HTTP request.
+Traceback (most recent call last):
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\util\connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\httpsession.py", line 465, in send
+    urllib_response = conn.urlopen(
+                      ^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\util\retry.py", line 525, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <botocore.awsrequest.AWSHTTPSConnection object at 0x0000015A0333D410>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\endpoint.py", line 281, in _do_get_response
+    http_response = self._send(request)
+                    ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\endpoint.py", line 377, in _send
+    return self.http_session.send(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\httpsession.py", line 494, in send
+    raise EndpointConnectionError(endpoint_url=request.url, error=e)
+botocore.exceptions.EndpointConnectionError: Could not connect to the endpoint URL: "https://ec2.us-east-1.amazonaws.com/"
+Event needs-retry.ec2.StartInstances: calling handler <botocore.retryhandler.RetryHandler object at 0x0000015A03C2D750>
+retry needed, retryable exception caught: Could not connect to the endpoint URL: "https://ec2.us-east-1.amazonaws.com/"
+Traceback (most recent call last):
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\util\connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\httpsession.py", line 465, in send
+    urllib_response = conn.urlopen(
+                      ^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\util\retry.py", line 525, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <botocore.awsrequest.AWSHTTPSConnection object at 0x0000015A0333D410>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\retryhandler.py", line 307, in _should_retry
+    return self._checker(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\retryhandler.py", line 363, in __call__
+    checker_response = checker(
+                       ^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\retryhandler.py", line 247, in __call__
+    return self._check_caught_exception(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\retryhandler.py", line 416, in _check_caught_exception
+    raise caught_exception
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\endpoint.py", line 281, in _do_get_response
+    http_response = self._send(request)
+                    ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\endpoint.py", line 377, in _send
+    return self.http_session.send(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\httpsession.py", line 494, in send
+    raise EndpointConnectionError(endpoint_url=request.url, error=e)
+botocore.exceptions.EndpointConnectionError: Could not connect to the endpoint URL: "https://ec2.us-east-1.amazonaws.com/"
+Retry needed, action of: 0.38783640330911995
+Response received to retry, sleeping for 0.38783640330911995 seconds
+Event request-created.ec2.StartInstances: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x0000015A03BE5290>>
+Event choose-signer.ec2.StartInstances: calling handler <function set_operation_specific_signer at 0x0000015A02032020>
+Calculating signature using v4 auth.
+CanonicalRequest:
+POST
+/
+
+content-type:application/x-www-form-urlencoded; charset=utf-8
+host:ec2.us-east-1.amazonaws.com
+x-amz-date:20230905T164606Z
+
+content-type;host;x-amz-date
+1aac96474950b1e384cdb64ffb15afeb84c8bdbe7ac6783f025652dafe1c0c91
+StringToSign:
+AWS4-HMAC-SHA256
+20230905T164606Z
+20230905/us-east-1/ec2/aws4_request
+ab4f08f7f4e335fc0e2c89ca3cd99d6d31b43458e527044b8a158d3b9df8c9d0
+Signature:
+162d37c5438dafe164c89a389104b56dc8ffe57bb202ad2a6003b72069615567
+Event request-created.ec2.StartInstances: calling handler <function add_retry_headers at 0x0000015A02058400>
+Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://ec2.us-east-1.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.26.129 Python/3.11.2 Windows/10 Botocore/1.29.129', 'X-Amz-Date': b'20230905T164606Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAX2VFF7LDK6BPSAUR/20230905/us-east-1/ec2/aws4_request, SignedHeaders=content-type;host;x-amz-date, Signature=162d37c5438dafe164c89a389104b56dc8ffe57bb202ad2a6003b72069615567', 'amz-sdk-invocation-id': b'3aa45e09-1e55-4b0d-8344-1f8b5b9022b8', 'amz-sdk-request': b'attempt=3; max=5', 'Content-Length': '73'}>
+Certificate path: C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\certifi\cacert.pem
+Starting new HTTPS connection (3): ec2.us-east-1.amazonaws.com:443
+Exception received when sending HTTP request.
+Traceback (most recent call last):
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\util\connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\httpsession.py", line 465, in send
+    urllib_response = conn.urlopen(
+                      ^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\util\retry.py", line 525, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <botocore.awsrequest.AWSHTTPSConnection object at 0x0000015A03287A90>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\endpoint.py", line 281, in _do_get_response
+    http_response = self._send(request)
+                    ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\endpoint.py", line 377, in _send
+    return self.http_session.send(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\httpsession.py", line 494, in send
+    raise EndpointConnectionError(endpoint_url=request.url, error=e)
+botocore.exceptions.EndpointConnectionError: Could not connect to the endpoint URL: "https://ec2.us-east-1.amazonaws.com/"
+Event needs-retry.ec2.StartInstances: calling handler <botocore.retryhandler.RetryHandler object at 0x0000015A03C2D750>
+retry needed, retryable exception caught: Could not connect to the endpoint URL: "https://ec2.us-east-1.amazonaws.com/"
+Traceback (most recent call last):
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\util\connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\httpsession.py", line 465, in send
+    urllib_response = conn.urlopen(
+                      ^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\util\retry.py", line 525, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <botocore.awsrequest.AWSHTTPSConnection object at 0x0000015A03287A90>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\retryhandler.py", line 307, in _should_retry
+    return self._checker(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\retryhandler.py", line 363, in __call__
+    checker_response = checker(
+                       ^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\retryhandler.py", line 247, in __call__
+    return self._check_caught_exception(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\retryhandler.py", line 416, in _check_caught_exception
+    raise caught_exception
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\endpoint.py", line 281, in _do_get_response
+    http_response = self._send(request)
+                    ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\endpoint.py", line 377, in _send
+    return self.http_session.send(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\httpsession.py", line 494, in send
+    raise EndpointConnectionError(endpoint_url=request.url, error=e)
+botocore.exceptions.EndpointConnectionError: Could not connect to the endpoint URL: "https://ec2.us-east-1.amazonaws.com/"
+Retry needed, action of: 2.6890714154623536
+Response received to retry, sleeping for 2.6890714154623536 seconds
+Event request-created.ec2.StartInstances: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x0000015A03BE5290>>
+Event choose-signer.ec2.StartInstances: calling handler <function set_operation_specific_signer at 0x0000015A02032020>
+Calculating signature using v4 auth.
+CanonicalRequest:
+POST
+/
+
+content-type:application/x-www-form-urlencoded; charset=utf-8
+host:ec2.us-east-1.amazonaws.com
+x-amz-date:20230905T164608Z
+
+content-type;host;x-amz-date
+1aac96474950b1e384cdb64ffb15afeb84c8bdbe7ac6783f025652dafe1c0c91
+StringToSign:
+AWS4-HMAC-SHA256
+20230905T164608Z
+20230905/us-east-1/ec2/aws4_request
+d374bd0edbb52e105510f590fbb28862a27680063a8be51ab97d57cc59cf37db
+Signature:
+07dc850470594bbb059ab4089a5379afb078cf4841da82c63f08da918a810330
+Event request-created.ec2.StartInstances: calling handler <function add_retry_headers at 0x0000015A02058400>
+Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://ec2.us-east-1.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.26.129 Python/3.11.2 Windows/10 Botocore/1.29.129', 'X-Amz-Date': b'20230905T164608Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAX2VFF7LDK6BPSAUR/20230905/us-east-1/ec2/aws4_request, SignedHeaders=content-type;host;x-amz-date, Signature=07dc850470594bbb059ab4089a5379afb078cf4841da82c63f08da918a810330', 'amz-sdk-invocation-id': b'3aa45e09-1e55-4b0d-8344-1f8b5b9022b8', 'amz-sdk-request': b'attempt=4; max=5', 'Content-Length': '73'}>
+Certificate path: C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\certifi\cacert.pem
+Starting new HTTPS connection (4): ec2.us-east-1.amazonaws.com:443
+Exception received when sending HTTP request.
+Traceback (most recent call last):
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\util\connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\httpsession.py", line 465, in send
+    urllib_response = conn.urlopen(
+                      ^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\util\retry.py", line 525, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <botocore.awsrequest.AWSHTTPSConnection object at 0x0000015A028B0B50>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\endpoint.py", line 281, in _do_get_response
+    http_response = self._send(request)
+                    ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\endpoint.py", line 377, in _send
+    return self.http_session.send(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\httpsession.py", line 494, in send
+    raise EndpointConnectionError(endpoint_url=request.url, error=e)
+botocore.exceptions.EndpointConnectionError: Could not connect to the endpoint URL: "https://ec2.us-east-1.amazonaws.com/"
+Event needs-retry.ec2.StartInstances: calling handler <botocore.retryhandler.RetryHandler object at 0x0000015A03C2D750>
+retry needed, retryable exception caught: Could not connect to the endpoint URL: "https://ec2.us-east-1.amazonaws.com/"
+Traceback (most recent call last):
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\util\connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\httpsession.py", line 465, in send
+    urllib_response = conn.urlopen(
+                      ^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\util\retry.py", line 525, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <botocore.awsrequest.AWSHTTPSConnection object at 0x0000015A028B0B50>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\retryhandler.py", line 307, in _should_retry
+    return self._checker(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\retryhandler.py", line 363, in __call__
+    checker_response = checker(
+                       ^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\retryhandler.py", line 247, in __call__
+    return self._check_caught_exception(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\retryhandler.py", line 416, in _check_caught_exception
+    raise caught_exception
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\endpoint.py", line 281, in _do_get_response
+    http_response = self._send(request)
+                    ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\endpoint.py", line 377, in _send
+    return self.http_session.send(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\httpsession.py", line 494, in send
+    raise EndpointConnectionError(endpoint_url=request.url, error=e)
+botocore.exceptions.EndpointConnectionError: Could not connect to the endpoint URL: "https://ec2.us-east-1.amazonaws.com/"
+Retry needed, action of: 0.11196711906877255
+Response received to retry, sleeping for 0.11196711906877255 seconds
+Event request-created.ec2.StartInstances: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x0000015A03BE5290>>
+Event choose-signer.ec2.StartInstances: calling handler <function set_operation_specific_signer at 0x0000015A02032020>
+Calculating signature using v4 auth.
+CanonicalRequest:
+POST
+/
+
+content-type:application/x-www-form-urlencoded; charset=utf-8
+host:ec2.us-east-1.amazonaws.com
+x-amz-date:20230905T164608Z
+
+content-type;host;x-amz-date
+1aac96474950b1e384cdb64ffb15afeb84c8bdbe7ac6783f025652dafe1c0c91
+StringToSign:
+AWS4-HMAC-SHA256
+20230905T164608Z
+20230905/us-east-1/ec2/aws4_request
+d374bd0edbb52e105510f590fbb28862a27680063a8be51ab97d57cc59cf37db
+Signature:
+07dc850470594bbb059ab4089a5379afb078cf4841da82c63f08da918a810330
+Event request-created.ec2.StartInstances: calling handler <function add_retry_headers at 0x0000015A02058400>
+Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://ec2.us-east-1.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.26.129 Python/3.11.2 Windows/10 Botocore/1.29.129', 'X-Amz-Date': b'20230905T164608Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAX2VFF7LDK6BPSAUR/20230905/us-east-1/ec2/aws4_request, SignedHeaders=content-type;host;x-amz-date, Signature=07dc850470594bbb059ab4089a5379afb078cf4841da82c63f08da918a810330', 'amz-sdk-invocation-id': b'3aa45e09-1e55-4b0d-8344-1f8b5b9022b8', 'amz-sdk-request': b'attempt=5; max=5', 'Content-Length': '73'}>
+Certificate path: C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\certifi\cacert.pem
+Starting new HTTPS connection (5): ec2.us-east-1.amazonaws.com:443
+Exception received when sending HTTP request.
+Traceback (most recent call last):
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\util\connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\httpsession.py", line 465, in send
+    urllib_response = conn.urlopen(
+                      ^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\util\retry.py", line 525, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <botocore.awsrequest.AWSHTTPSConnection object at 0x0000015A028B1E10>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\endpoint.py", line 281, in _do_get_response
+    http_response = self._send(request)
+                    ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\endpoint.py", line 377, in _send
+    return self.http_session.send(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\httpsession.py", line 494, in send
+    raise EndpointConnectionError(endpoint_url=request.url, error=e)
+botocore.exceptions.EndpointConnectionError: Could not connect to the endpoint URL: "https://ec2.us-east-1.amazonaws.com/"
+Event needs-retry.ec2.StartInstances: calling handler <botocore.retryhandler.RetryHandler object at 0x0000015A03C2D750>
+Internal Server Error: /start_instance/73/
+Traceback (most recent call last):
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\util\connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\httpsession.py", line 465, in send
+    urllib_response = conn.urlopen(
+                      ^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\util\retry.py", line 525, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <botocore.awsrequest.AWSHTTPSConnection object at 0x0000015A028B1E10>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\myOrganization\Organization\members\start_instance_view.py", line 23, in start_instance_view
+    ec2_instance.start_instance(instance_id)
+  File "C:\myOrganization\Organization\members\ec2_class.py", line 37, in start_instance
+    self.ec2.start_instances(InstanceIds=[instance_id])
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\client.py", line 530, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\client.py", line 943, in _make_api_call
+    http, parsed_response = self._make_request(
+                            ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\client.py", line 966, in _make_request
+    return self._endpoint.make_request(operation_model, request_dict)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\endpoint.py", line 119, in make_request
+    return self._send_request(request_dict, operation_model)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\endpoint.py", line 202, in _send_request
+    while self._needs_retry(
+          ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\endpoint.py", line 354, in _needs_retry
+    responses = self._event_emitter.emit(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\hooks.py", line 412, in emit
+    return self._emitter.emit(aliased_event_name, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\hooks.py", line 256, in emit
+    return self._emit(event_name, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\hooks.py", line 239, in _emit
+    response = handler(**kwargs)
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\retryhandler.py", line 207, in __call__
+    if self._checker(**checker_kwargs):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\retryhandler.py", line 284, in __call__
+    should_retry = self._should_retry(
+                   ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\retryhandler.py", line 320, in _should_retry
+    return self._checker(attempt_number, response, caught_exception)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\retryhandler.py", line 363, in __call__
+    checker_response = checker(
+                       ^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\retryhandler.py", line 247, in __call__
+    return self._check_caught_exception(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\retryhandler.py", line 416, in _check_caught_exception
+    raise caught_exception
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\endpoint.py", line 281, in _do_get_response
+    http_response = self._send(request)
+                    ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\endpoint.py", line 377, in _send
+    return self.http_session.send(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pamid\AppData\Local\Programs\Python\Python311\Lib\site-packages\botocore\httpsession.py", line 494, in send
+    raise EndpointConnectionError(endpoint_url=request.url, error=e)
+botocore.exceptions.EndpointConnectionError: Could not connect to the endpoint URL: "https://ec2.us-east-1.amazonaws.com/"

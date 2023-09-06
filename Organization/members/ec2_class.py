@@ -1,6 +1,9 @@
 import boto3
 from botocore.exceptions import ClientError
 
+
+
+
 # Defining a class for EC2 instances
 class EC2Instance:
          # Constructor function to initialize the object
@@ -14,7 +17,7 @@ class EC2Instance:
                                 aws_secret_access_key=self.aws_secret_access_key, 
                                 region_name='us-east-1')
 
-    
+
     def validate_instance_id(self, instance_id):
         try:
             # Use the EC2 client to describe the instance and check if it exists
@@ -27,23 +30,32 @@ class EC2Instance:
                 return False  # The instance with the given ID does not exist
         except ClientError:
             return False  # An error occurred, indicating an invalid instance ID
-
-#     def validate_instance_id(self,instance_id):
-#         try:
-#             response = self.ec2.describe_instances(InstanceIds=[instance_id])
-#             if len(response['Reservations']) == 0:
-#                 print(f"Invalid instance ID: {instance_id}")
-#                 return False
-#             self.instance_state = response['Reservations'][0]['Instances'][0]['State']['Name']
-#         except ClientError as e:
-#             if e.response['Error']['Code'] == 'InvalidInstanceID.Malformed':
-#                 print(f"Invalid instance ID: {instance_id}")
-#             else:
-#                 print(f"An error occurred: {e}")
-#             return False
-#         return True
-#     # Place your instance ID validation code here
-#     # Return True if the instance ID is valid, False otherwise
-#     pass
-# # # Creating an instance of the EC2Instance class with passing the AWS access keys as argument values
-# ec2_instance = EC2Instance("key",'key2')
+ 
+    def start_instance(self, instance_id):
+        try:
+            # Use the EC2 client to start the instance
+            self.ec2.start_instances(InstanceIds=[instance_id])
+            return True  # Instance start request successful
+        except ClientError:
+            return False  # An error occurred, indicating unsuccessful instance start request
+        
+    def stop_instance(self, instance_id):
+        try:
+            response = self.ec2.stop_instances(InstanceIds=[instance_id])
+            stopping_instances = response.get('StoppingInstances', [])
+            if stopping_instances and stopping_instances[0]['CurrentState']['Name'] == 'stopping':
+                return True  # Instance stop request successful
+            else:
+                return False  # Failed to stop the instance
+        except ClientError as e:
+            print(f"Error stopping instance: {e}")
+            return False  # An error occurred, indicating unsuccessful instance stop request
+  
+    def describe_instance_state(self, instance_id):
+        response = self.ec2.describe_instances(InstanceIds=[instance_id])
+        instance_state = response['Reservations'][0]['Instances'][0]['State']['Name']
+        return instance_state
+    
+    def wait_for_instance_state(self, instance_id, state):
+        waiter = self.ec2.get_waiter('instance_stopped' if state == 'stopped' else 'instance_running')
+        waiter.wait(InstanceIds=[instance_id])

@@ -2,8 +2,6 @@
 from django.shortcuts import render
 from .models import Team
 
-
-
 def teams_view(request):
     teams = Team.objects.all()
     print(teams)
